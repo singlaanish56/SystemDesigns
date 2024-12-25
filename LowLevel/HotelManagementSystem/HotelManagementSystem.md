@@ -33,7 +33,7 @@ so the list of productUse in the Reservation would have two productUses, single 
 
 another basic entity would handle the PaymentInfo, (tokenized), list<deposits>, list<refund>, list<guarantee>
 
- paymentInfo tracks the payment methods used until now by the customer, remember the customer can pay in multiple ways or parts. Online while booking but by credit card when checkout
+paymentInfo tracks the payment methods used until now by the customer, remember the customer can pay in multiple ways or parts. Online while booking but by credit card when checkout
 
 the list of deposists /refund would be append only in the system, this can be used to track the money deposited by the customer ,while booking. refund would track any refunds.
 appends only logs, because we are essentially storing the txn infomration. for eg if the customer did double payment, we can undo that with adding a refund item. But not delete the deposit item. This would help us track (how many times deposit was recoignized by the system).
